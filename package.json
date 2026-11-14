@@ -1,0 +1,30 @@
+{
+  "name": "permit-central",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:init": "tsx --env-file-if-exists=.env.local scripts/init-db.ts",
+    "ingest": "tsx --env-file-if-exists=.env.local scripts/ingest.ts",
+    "digest": "tsx --env-file-if-exists=.env.local scripts/digest.ts",
+    "retag": "tsx --env-file-if-exists=.env.local scripts/retag.ts",
+    "stats": "tsx --env-file-if-exists=.env.local scripts/stats.ts"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.18.0",
+    "next": "^15.5.28",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "resend": "^6.35.0",
+    "stripe": "^23.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
